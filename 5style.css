@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 額外對標籤做基本樣式設定 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #fbfbfb;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 700px;
+  padding: 24px 20px;
+}
+
+.banner {
+  display: flex;
+  height: calc(100vh - 90px);
+  width: 100%;
+  width: 0 auto;
+  flex-wrap: wrap;
+}
+
+.banner-photo {
+  width: 50%;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner-introduce {
+  width: 50%;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.banner-introduce-content {
+  width: 50%;
+  text-align: left;
+  color: blue;
+  margin-left: 80px;
+}
+
+.banner-blog-title {
+  font-size: 120px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.banner-subTitle {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.banner-post {
+  width: 100%;
+  /* width: 1920px; */
+  /* height: 640px; */
+  display: flex;
+  margin: 0 auto;
+  gap: 24px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.banner-post-left {
+  width: 948px;
+  height: 640px;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/About%20Section.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner-post-right {
+
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 24px;
+}
+
+.banner-post-right .inside {
+  width: 636px;
+  height: 226px;
+}
+
+.banner-post-right .title {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.banner-post-right .tag1 {
+  display: inline;
+  color: blue;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.search-container {
+  width: 416px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  width: 318px;
+  border: 1px solid #4B4B4B;
+  border-radius: 40px;
+  padding: 16px 48px 16px 16px;
+  margin-top: 80px;
+  margin-left: 312px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  /* padding: 5px; */
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500px;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 0 50px 0 20px;
+  border: 2px solid #e1e8ed;
+  border-radius: 25px;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* margin-left: 312px;
+  margin-right:312px; */
+
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1296px;
+  gap: 80px 24px;
+  padding: 40px 0px;
+  align-items: flex-start;
+  margin: auto;
+
+}
+
+.card {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 416px;
+  width: 33%;
+  gap: 16px;
+
+}
+
+.card .hashtag {
+  font-size: 24px;
+  color: blue;
+  margin-right: 8px;
+}
+
+.popular {
+  border: 1px solid rgb(170, 168, 168);
+  padding: 8px 16px;
+  border-radius: 80px;
+  background: blue;
+  color: white;
+}
+
+.card .title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.btn {
+  border: 2px solid rgb(170, 168, 168);
+  padding: 8px 16px;
+  border-radius: 80px;
+}
+
+.btn:hover {
+  background: #000;
+  color: white;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.page {
+  max-width: 328px;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  padding: 8px 20px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.page ul {
+  display: flex;
+  justify-content: center;
+}
+
+.page li {
+  width: 40px;
+}
+
+.footer1 {
+  max-width: 1296px;
+  margin: auto;
+  border-top: 1px solid #6c757d;
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer1 p {
+  width: 1036px;
+  height: 48px;
+  color: #000;
+  font-size: 32px;
+  font-weight: 500px;
+  line-height: 1.5;
+  padding: 2px 0;
+  text-align: left;
+}
+
+.footer1 ul {
+  display: flex;
+  margin: 0 auto;
+
+}
+
+.footer1 li {
+  text-align: left;
+  width: 44px;
+  height: 44px;
+}
+
+.footer2 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width:992px){
+  .banner-photo
+  .banner{
+    width: 48%;
+  }
+  .container {
+    padding: 0 15px;
+
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .banner-photo,
+  .banner-introduce,
+  .card,
+  .search-container,
+  .container {
+    width: 100px;
+  }
+
+  .banner,
+  .banner-post,
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .blog-title {
+    font-style: 52px;
+  }
+
+  .banner-photo,
+  .banner-post {
+    height: calc(100vh - 90px - 180px);
+  }
+
+  .banner-introduce {
+    padding: 24px;
+  }
+
+  .banner-introduce-content,
+  .banner-post-right {
+    margin-left: 0px;
+  }
+
+}
