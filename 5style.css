@@ -5,135 +5,48 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
 body {
-  line-height: 1;
+	line-height: 1;
 }
-
-ol,
-ul {
-  list-style: none;
+ol, ul {
+	list-style: none;
 }
-
-blockquote,
-q {
-  quotes: none;
+blockquote, q {
+	quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* 額外對標籤做基本樣式設定 */
@@ -218,7 +131,6 @@ a {
   color: blue;
   margin-left: 80px;
 }
-
 .banner-blog-title {
   font-size: 120px;
   font-weight: bold;
@@ -226,7 +138,6 @@ a {
   margin-bottom: 1rem;
   letter-spacing: 0.05em;
 }
-
 .banner-subTitle {
   font-size: 28px;
   line-height: 1.5;
@@ -234,18 +145,18 @@ a {
 }
 
 .banner-post {
-  max-width: 100%;
-  width: 1920px;
-  /* height: 640px; */
+  width: 100%;
+  max-width: 1920px;
   display: flex;
   margin: 0 auto;
   gap: 24px;
   border: 1px solid black;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
 .banner-post-left {
-  width: 948px;
+  flex: 1;
+  width: 50%;
   height: 640px;
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/About%20Section.png?raw=true);
   background-size: cover;
@@ -255,18 +166,18 @@ a {
 }
 
 .banner-post-right {
-
+  flex: 1;
+  width: 50%;
+  height: auto;
   display: block;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  margin-left: 24px;
+  padding-left: 24px;
 }
 
 .banner-post-right .inside {
-  width: 636px;
-  height: 226px;
+  max-width: 636px;
 }
 
 .banner-post-right .title {
@@ -296,7 +207,6 @@ a {
   margin-top: 80px;
   margin-left: 312px;
 }
-
 .search-input {
   flex: 1;
   border: none;
@@ -307,27 +217,12 @@ a {
   font-weight: 500px;
 }
 
-.input {
-  width: 100%;
-  height: 50px;
-  padding: 0 50px 0 20px;
-  border: 2px solid #e1e8ed;
-  border-radius: 25px;
-  font-size: 16px;
-  background: white;
-  outline: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
 .container {
   max-width: 1296px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
-  /* margin-left: 312px;
-  margin-right:312px; */
-
+  margin-left: 312px;
 }
 
 .article-list {
@@ -338,17 +233,14 @@ a {
   padding: 40px 0px;
   align-items: flex-start;
   margin: auto;
-
 }
 
 .card {
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-evenly;
   max-width: 416px;
   width: 33%;
   gap: 16px;
-
 }
 
 .card .hashtag {
@@ -408,9 +300,10 @@ a {
 
 .footer1 {
   max-width: 1296px;
-  margin: auto;
+  margin: 0 auto;
   border-top: 1px solid #6c757d;
   display: flex;
+  flex-wrap: wrap;
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -459,7 +352,6 @@ a {
 
 
 @media (max-width: 767px) {
-
   .banner-photo,
   .banner-introduce,
   .card,
